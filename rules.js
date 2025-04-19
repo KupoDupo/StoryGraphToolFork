@@ -18,39 +18,40 @@ class Location extends Scene {
             this.engine.gotoScene(RiddleLocation, key);  
          }*/
 
-        if (Engine.inventory.hasItem("Lantern") && key == "THE DRAGON") {  // Check if the player has the Lantern
-            this.engine.addChoice("The Lantern glows fiercly, shaking you into action! You dart out of the dragon's mouth, falling into a cranny and right into an airduct! It shoots you up!", {Text: "Up You Go", Target: "Uppies!"});
-        }
-
-        if (locationData.Body == "Freedom!" ) {  // Check if the player has the key
-            this.engine.addChoice( "Try the Rock Key", { 
-                Text: "Let's Try the Rock Key", 
-                Target: "Outside"
-            });
-        }
-
-        if (Engine.inventory.hasItem("Key") && key == "Freedom!") {  // Check if the player has the useless key
-            this.engine.addChoice("Try Tge Jet", { 
-                Text: "Let's Try the Golden Key", 
-                Target: "Hoard Tunnel"
-            });
-        }
-
         if(locationData.Choices) { // TODO: check if the location has any Choices
             for(let choice of locationData.Choices) { // TODO: loop over the location's Choices
                 this.engine.addChoice(choice.Text, choice); // TODO: use the Text of the choice
                 // TODO: add a useful second argument to addChoice so that the current code of handleChoice below works
+                if (Engine.inventory.hasItem("Lantern") && key === "THE DRAGON") {  // Check if the player has the Lantern
+                    this.engine.addChoice("The Lantern glows fiercly, shaking you into action! You dart out of the dragon's mouth, falling into a cranny and right into an airduct! It shoots you up!", {Text: "Up You Go", Target: "Uppies!"});
+                }
+        
+                if (Engine.inventory.hasItem("Rock Key" && choice.Text === "Freedom!") ) {  // Check if the player has the key
+                    this.engine.addChoice( "Try the Rock Key", { 
+                        Text: "Let's Try the Rock Key", 
+                        Target: "Outside"
+                    });
+                }
+        
+                if (Engine.inventory.hasItem("Key") && key === "Freedom!") {  // Check if the player has the useless key
+                    this.engine.addChoice("Try The Golden Key", { 
+                        Text: "Hmm. Yeah that's not gonna fit. It really is useless. Where's the real key?", 
+                        Target: "Hoard Tunnel"
+                    });
+                }
+        
             }
         } else {
             this.engine.addChoice("The end.")
         }
     }
 
+    
     handleChoice(choice) {
         if(choice) {
             this.engine.show("&gt; "+choice.Text);
             this.engine.gotoScene(Location, choice.Target);
-            Engine.inventory.addItem(choice);
+            Engine.inventory.addItem(choice.Target);
         } else {
             this.engine.gotoScene(End);
         }
