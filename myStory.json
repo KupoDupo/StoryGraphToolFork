@@ -1,58 +1,324 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Escape from The Dragon's Hoard!",
+    "Credits": "Code Created by Adam Smith (amsmith@ucsc.edu), modified by Loisel Kleijnen (lkleijne@ucsc.edu).",
+    "InitialLocation": "The Dragon's Hoard First",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "The Dragon's Hoard First": {
+            "Body": "You rustle your dark wings. A poor little crow fairy, asleep in your little nest of glimmering good, when some evil beast snatched up your treasures (and you!) in its impossibly large claws, dropping you from the sky and into a large cavern. A large hole in the ceiling, now quite far away from you, lets the sunlight filter in, illuminated the cave in golden yellows, sapphire blues, and all the hues of more gemstones than you had ever seen before.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Look Around",
+                    "Target": "The Dragon Hoard"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "The Dragon Hoard": {
+            "Body": "The heart of every dragon's lair, its golden hoard. The cave is littered with precious jewels, your treasures scattered here and there amongst them, far outnumbered by the amount the dragon must have snatched from nearby kingdoms, other fairies like you, heck maybe even other dragons! There must be some way out of here, you see one tunnel exit scraped into the cave walls, it's gaping size certainly meant to accomadate the hoard's owner.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Attempt to Fly Up The Wall",
+                    "Target": "Fly Up"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Examine the Hoard for Treasures! It's Only Right!",
+                    "Target": "Treasures"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Enter the Tunnel",
+                    "Target": "Hoard Tunnel"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Fly Up": {
+            "Body": "You dust yourself off and get ready for the long flight up. Your little wings beat and beat and beat and - wow this is tiring - ",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Stop on a Ledge Poking Out of the Wall",
+                    "Target": "The Ledge"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Keep Flying!",
+                    "Target": "Fly and Fall"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "The Ledge": {
+            "Body": "You rest on the little stone outcropping. The treasures are far beneath you and yet, your sweet escape into the sun seems just as far away as it did from down on the floor. Will you really be able to fly all that way? You're more of a quick flight type of farie than this type of prolonged marathon flying. Your only choice is to keep flying though, or give up... Or wait! What's this little crack in the wall?",
+            "Choices": [
+                {
+                    "Text": "Keep Flying!",
+                    "Target": "Fly and Fall"
+                },
+                {
+                    "Text": "Time to throw in the towel.. Let's explore the cave floor some more.",
+                    "Target": "The Dragon Hoard"
+                },
+                {
+                    "Text": "Investigate the Crack",
+                    "Target": "The Crack"
+                }
+            ]
+        },
+        "Fly and Fall": {
+            "Body": "You keep flying, reaching closer and closer and... Wait a minute. The hole is really not seeming any closer and you're running on fumes. You can't go on and it takes all the energy you have left to drift down to the ground, landing semi gracefully.",
+            "Choices": [
+                {
+                    "Text": "Back to Square Zero",
+                    "Target": "The Dragon Hoard"
+                }
+            ]
+        },
+        "The Crack": {
+            "Body": "Looking at the crack, it seems just big enough for you to fit in and shimmy through.",
+            "Choices": [
+                {
+                    "Text": "Shimmy Through",
+                    "Target": "In The Crack"
+                },
+                {
+                    "Text": "I'm Claustrophobic. I'd Rather Keep Flying.",
+                    "Target": "Fly and Fall"
+                }
+            ]
+        },
+        "In The Crack": {
+            "Body": "Traveling along the crack you continue on in the dark until a faint glow starts to fill up the air around you. The glow gets more and more intense until you see something. What is it??",
+            "Choices": [
+                {
+                    "Text": "That's Freaky I'm Leaving and I Could Care Less",
+                    "Target": "The Ledge"
+                },
+                {
+                    "Text": "It's Another Fairy!",
+                    "Target": "Conversation"
+                },
+                {
+                    "Text": "It's a Monster!!",
+                    "Target": "Run"
+                }
+            ]
+        },
+        "Run": {
+            "Body": "You turn and run, shimmying through the tight sections of the crack as fast as you can. You emerge back onto the ledge. No way you're going back there. Right?",
+            "Choices": [
+                {
+                    "Text": "Back on The Ledge",
+                    "Target": "The Ledge"
+                }
+            ]
+        },
+        "Conversation": {
+            "Body": "You call out to the fairy, who's seen you coming. \"H-h-hi. Umm.. I don't know what you're doing here but you could stay if you wanted. I've found a little pool to drink from, and some mushrooms to eat. There's no escaping this hoard with that dragon around and there never will be. But at least we'd have each other\"",
+            "Choices": [
+                {
+                    "Text": "What a Wuss, I'm Out of Here.",
+                    "Target": "The Ledge"
+                },
+                {
+                    "Text": "Maybe You Can Convince Him to Come With You",
+                    "Target": "Convince"
+                },
+                {
+                    "Text": "Stay. Forever.",
+                    "Target": "Stay"
+                }
+            ]
+        },
+        "Stay": {
+            "Body": "Resigned to your fate you follow the fairy...He's created a small little cottage out of debris, a few gems decorating his small cave. A small pool fed by the dripping icicles above and faintly glowing mushrooms for your meals. This is your life now....",
+            "Choices": [
+                {
+                    "Text": "Forever...",
+                    "Target": "Forever"
+                },
+                {
+                    "Text": "PLEASE NO",
+                    "Target": "Leave"
+                }
+            ]
+        },
+        "Forever": {
+            "Body": "And ever."
+        },
+        "Leave": {
+            "Body": "You can't take this. He isn't even your type, you hate cold water, and you're more of a fresh fruit fairy than musty mushroom. Let's dip!",
+            "Choices": [
+                {
+                    "Text": "Back to the Ledge!",
+                    "Target": "The Ledge"
+                }
+            ]
+        },
+        "Convince": {
+            "Body": "\"Come with me!\" You urge him. \"Oh dear... Ummm. No. I don't think I will.\" He replies.",
+            "Choices": [
+                {
+                    "Text": "This isn't going to work... Let's Leave.",
+                    "Target": "The Ledge"
+                },
+                {
+                    "Text": "Try Harder to Convince Him.",
+                    "Target": "Actually Convince"
+                }
+            ]
+        },
+        "Actually Convince": {
+            "Body": "\"Do you really wanna die here? Eating mushrooms and never feeling the wind again??\" You shake him, trying to jostle the fear loose and maybe let some courage in. \"Better that than dying! But here. Take this. It should help you.\" He hands you a small polished rock key. \"Back before the dragon spotted me I made a little door to escape this place. This key will open it up and let you out. If the dragon doesn't get to you first that is... Good luck!\"",
+            "Choices": [
+                {
+                    "Text": "Take the Rock Key.",
+                    "Target": "Rock Key"
+                }
+            ]
+        },
+        "Rock Key": {
+            "Body": "It fits nicely in your hand and you feel warmer. You know you have a way out of here now.",
+            "Choices": [
+                {
+                    "Text": "Back to the Ledge",
+                    "Target": "The Ledge"
+                }
+            ]
+        },
+        "Hoard Tunnel": {
+            "Body": "The tunnel is long and large, grooves carved into the wall by the dragon's sharp scales and fearsome claws. It opens up into another cavern, this one with two exits. One is large and the air around it is sweltering hot. It must be where the dragon rests. The other exit is miniscule, a tiny polished rock door, about your size.",
+            "Choices": [
+                {
+                    "Text": "The Polished Rock Door",
+                    "Target": "Freedom!"
+                },
+                {
+                    "Text": "The Sweltering Hot Entrance... Are You Sure???",
+                    "Target": "THE DRAGON"
+                }
+            ]
+        },
+        "THE DRAGON": {
+            "Body": "Oh good gods why... why are you inching down this passageway? The air only getting hotter and more oppresive as you continue, until it feels like moving through mud, your wings wilting down and resting in your back in the intense heat. And finally. You see it. The dragon.",
+            "Choices": [
+                {
+                    "Text": "I Need a Closer Look (No, You Do Not)",
+                    "Target": "Yummy"
+                },
+                {
+                    "Text": "That's Close Enough! Time to Go Back",
+                    "Target": "Hoard Tunnel"
+                }
+            ]
+        },
+        "Yummy": {
+            "Body": "You inch closer. It's not everyday you get to see a dragon (for good reason). But you get too close! The dragon stirs! Opening a large eye to look at you and",
+            "Choices": [
+                {
+                    "Text": "EAT ME!",
+                    "Target": "The End"
+                },
+                {
+                    "Text": "IGNORE ME",
+                    "Target": "Yeah Right"
+                }
+            ]
+        },
+        "Yeah Right": {
+            "Body": "Yeah no. That's not how this works. This isn't some dreamy fairytale. You only have yourself to blame. Choose wiser next time. Not that you have a next time now.",
+            "Choices": [
+                {
+                    "Text": "HE'S GONNA EAT ME (Yes, He is - I Tried to warn you)",
+                    "Target": "The End"
+                }
+            ]
+        },
+        "The End": {
+            "Body": "He opens his wide mouth, every tooth larger than you are and within a second he -."
+        },
+        "Treasures": {
+            "Body": "Hmmm. Quite a few things catch your eye. But what to look at first?",
+            "Choices": [
+                {
+                    "Text": "The Glittering Red Gemstone the Size of Your Fist!",
+                    "Target": "Red Gemstone"
+                },
+                {
+                    "Text": "The Strangely Glowing Book that Seems to Whisper to You",
+                    "Target": "Book"
+                },
+                {
+                    "Text": "The Tiny Enchanted Lantern You Could Attach to Your Belt",
+                    "Target": "Lantern"
+                },
+                {
+                    "Text": "A Golden Key. It Looks Largely Ornamental but Who Knows?",
+                    "Target": "Key"
+                }
+            ]
+        },
+        "Red Gemstone": {
+            "Body": "It's beautiful but... Definitely useless. But who cares! Take it anyways.",
+            "Choices": [
+                {
+                    "Text": "Look at the Other Treasures",
+                    "Target": "Treasures"
+                },
+                {
+                    "Text": "Time to Go",
+                    "Target": "The Dragon Hoard"
+                }
+            ]
+        },
+        "Book": {
+            "Body": "The book whispers louder! You hear it whisper a riddle. \"David's father has three sons: Snap, Crackle, and ?",
+            "Choices": [
+                {
+                    "Text": "Answer it!",
+                    "Target": "Book"
+                }
+            ],
+            "HasSpecialMechanism": true,
+            "MechanismType": "riddle"
+        },
+        "Lantern": {
+            "Body": "This could definitely come in handy! And it's cute too!",
+            "Choices": [
+                {
+                    "Text": "Look at the Other Treasures",
+                    "Target": "Treasures"
+                },
+                {
+                    "Text": "Time to Go",
+                    "Target": "The Dragon Hoard"
+                }
+            ]
+        },
+        "Key": {
+            "Body": "Hmmm. Will this be helpful? Hopefully. Probably not.",
+            "Choices": [
+                {
+                    "Text": "Look at the Other Treasures",
+                    "Target": "Treasures"
+                },
+                {
+                    "Text": "Time to Go",
+                    "Target": "The Dragon Hoard"
+                }
+            ]
+        },
+        "Flying Away": {
+            "Body": "With your newfound power, you fly up and up. The hole gets closer, the sunlight gets closer! You don't feel tired at all! You get closer and closer and YES! Finally! You're out! You can feel the warmth of the sun, the wind on your skin. Freedom! You might have to make a new nest but at least you're alive!"
+        },
+        "Freedom!": {
+            "Body": "Hmm how to open this door? Is there something that might work?",
+            "Choices": [
+                {
+                    "Text": "No",
+                    "Target": "Hoard Tunnel"
+                }
+            ]
+        },
+        "Uppies!": {
+            "Body": "The air duct tosses you onto some grass! What a miracle."
+        },
+        "Outside": {
+            "Body": "You're free!!"
         }
     }
 }
