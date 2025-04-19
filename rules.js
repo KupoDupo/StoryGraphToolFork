@@ -14,9 +14,9 @@ class Location extends Scene {
         let locationData = this.engine.storyData.Locations[key]; // TODO: use `key` to get the data object for the current story location
         this.engine.show(locationData.Body); // TODO: replace this text by the Body of the location data
         
-        /*if (locationData.HasSpecialMechanism && locationData.MechanismType === "riddle") {
+        if (locationData.HasSpecialMechanism && locationData.MechanismType === "riddle") {
             this.engine.gotoScene(RiddleLocation, key);  
-         }*/
+         }
 
         if(locationData.Choices) { // TODO: check if the location has any Choices
             for(let choice of locationData.Choices) { // TODO: loop over the location's Choices
@@ -64,7 +64,7 @@ class Location extends Scene {
         }
     }
 }
-/*
+
 class RiddleLocation extends Location {
     create(key) {
         let locationData = this.engine.storyData.Locations[key];
@@ -103,27 +103,27 @@ class RiddleLocation extends Location {
     }
 
     // Trigger the riddle mechanism
-    triggerPuzzleMechanism(key) {
+    triggerRiddleMechanism(key) {
         this.engine.show("You have to solve this riddle! Who knows what the book will give you");
-        this.addPuzzleChoices(key);
+        this.addRiddleChoices(key);
     }
 
-    addPuzzleChoices(key) {
-        this.engine.addChoice("Solve it", {
-            Text: "David!", 
-            Target: "_puzzleSolved"  // Target for solving the puzzle
+    addRiddleChoices(key) {
+        this.engine.addChoice("David", {
+            Text: "Solve it!", 
+            Target: "_riddleSolved"  // Target for solving the puzzle
         });
         this.engine.addChoice("Pop", {
             Text: "Fail it", 
-            Target: "_puzzleFailed"  // Target for failing the puzzle
+            Target: "_riddleFailed"  // Target for failing the puzzle
         });
         this.engine.addChoice("Who Cares?? Dumb Book", {
             Text: "Fail it", 
-            Target: "_puzzleFailed"  // Target for failing the puzzle
+            Target: "_riddleFailed"  // Target for failing the puzzle
         });
     }
 }
-*/
+
 class End extends Scene {
     create() {
         this.engine.show("<hr>");
